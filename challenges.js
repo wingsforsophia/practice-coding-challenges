@@ -145,13 +145,15 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
-
-function computeRemainder(dividend, divisor){
-  if (divisor === 0) return Infinity;
-  let division = Math.floor(dividend / divisor);
-  let nonRound = divisor * division;
-  return dividend - nonRound;
+function computeRemainder(a, b) {
+  if (b === 0){
+    return Infinity
+  } else {
+    return a % b
+  }
 }
+
+// console.log(computeRemainder(4, 0))
 
 
 
