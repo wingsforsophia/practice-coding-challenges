@@ -153,7 +153,7 @@ function computeRemainder(a, b) {
   }
 }
 
-// console.log(computeRemainder(4, 0))
+console.log(computeRemainder(4, 0))
 
 
 
