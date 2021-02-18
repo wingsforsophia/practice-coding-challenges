@@ -233,17 +233,15 @@ removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
-
-function removeEnds(str) {
-  if (str.length < 3) return '';
-  var result= '';
-  for (var i = 1; i < str.length - 1; i++) {
-    result += str.charAt(i);
-  }
-  return result;
+function removeEnds(str){
+  if (str.length < 3) return ""
+  str = str.split('')
+  str.pop()
+  str.shift()
+  return str.join('')
 }
 
-
+// console.log(removeEnds("SEI Rocks!"))
 
 /*-----------------------------------------------------------------------------
 Challenge: 09-charCount
