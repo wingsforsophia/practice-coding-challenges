@@ -204,15 +204,15 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
-
-function reverseUpcaseString(someWords){
-  let x = someWords.split('')
-  x.reverse()
-  return (x.join("")).toUpperCase()
-
+function reverseUpcaseString(words){
+  let string = words.split('')
+  string = string.reverse()
+  string = string.join('')
+  return string.toUpperCase()
 }
 
-// console.log(reverseUpcaseString("how about NOW"))
+// console.log(reverseUpcaseString("try this"))
+
 
 
 
