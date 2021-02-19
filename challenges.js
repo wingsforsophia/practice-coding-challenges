@@ -263,21 +263,20 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 // Your solution for 09-charCount here:
 
 
-function charCount(str) {
-  var result = {};
-  for (var i = 0; i < str.length; i++) {
-    var char = str.charAt(i);
-    // already seen this char?
-    if (result[char]) {
-      result[char]++;
+function charCount(str){
+  let result = {}
+  for (let i = 0; i < str.length; i++){
+    let char = str.charAt(i)
+    if (result[char]){
+      (result[char]++)
     } else {
-      result[char] = 1;
+      result[char] = 1
     }
   }
-  return result;
+  return result
 }
 
-
+console.log(charCount('Today is the greatest'))
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
 
