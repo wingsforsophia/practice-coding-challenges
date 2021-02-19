@@ -299,13 +299,7 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-function formatWithPadding(int, char, length) {
-  var result = int.toFixed(0);
-  while (result.length < length) {
-    result = char + result;
-  }
-  return result;
-}
+
 
 
 
@@ -330,15 +324,7 @@ isPalindrome(''); //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
-function isPalindrome(str) {
-  str = str.toLowerCase();
-  // loop to replace spaces
-  while (str.includes(' ')) str = str.replace(' ', '');
-  for (var i = 0; i < Math.floor(str.length / 2); i++) {
-    if (str.charAt(i) !== str.charAt(str.length - i - 1)) return false;
-  }
-  return true;
-}
+
 
 
 
@@ -363,14 +349,6 @@ hammingDistance('!!!!', '****'); //=> 4
 hammingDistance('abc', 'ab'); //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
-function hammingDistance(s1, s2) {
-  if (s1.length !== s2.length) return NaN;
-  var count = 0;
-  for (var i = 0; i < s1.length; i++) {
-    if (s1.charAt(i) !== s2.charAt(i)) count++;
-  }
-  return count;
-}
 
 
 
