@@ -302,23 +302,19 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 function formatWithPadding(num, str, pad) {
   num = num.toString()
   let newArr = []
-  if (num.length <= pad){
+  if (num.length >= pad){
     return num
   } else {
-    for (let i = 1; i <= pad; i++){
+    let newPad = pad - num.length
+    for (let i = 1; i <= newPad; i++){
       newArr.push(str)
     }
     newArr = newArr.join('')
     return newArr + num
   }
-  
-
 }
 
-console.log(formatWithPadding(1224, "*", 3))
-
-
-
+console.log(formatWithPadding(1224, "*", 7))
 
 
 /*-----------------------------------------------------------------------------
