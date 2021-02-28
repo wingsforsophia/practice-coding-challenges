@@ -314,9 +314,16 @@ function formatWithPadding(num, str, pad) {
   }
 }
 
-console.log(formatWithPadding(1224, "*", 7))
 
+// function formatWithPadding(int, char, length) {
+//   var result = int.toFixed(0);
+//   while (result.length < length) {
+//     result = char + result;
+//   }
+//   return result;
+// }
 
+// console.log(formatWithPadding(12246, "*", 10))
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
 
@@ -339,6 +346,26 @@ isPalindrome(''); //=> true
 // Your solution for 11-isPalindrome here:
 
 
+function isPalendrome(str) {
+  str = str.split(' ').join('')
+  let length = str.length 
+  // let newStr = str.split('')
+  if ((length / 2).toFixed() > (length / 2)) {
+    length = (length / 2).toFixed()
+    let newStr = str.split('')
+    
+
+
+    return newStr[length]
+  } else {
+    return "no"
+  }
+
+  
+}
+
+
+console.log(isPalendrome("what is upppp"))
 
 
 
