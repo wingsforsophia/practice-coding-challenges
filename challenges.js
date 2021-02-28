@@ -276,7 +276,7 @@ function charCount(str){
   return result
 }
 
-console.log(charCount('Today is the greatest'))
+// console.log(charCount('Today is the greatest'))
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
 
@@ -298,6 +298,24 @@ formatWithPadding(42, '*', 10); //=> "********42"
 formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
+
+function formatWithPadding(num, str, pad) {
+  num = num.toString()
+  let newArr = []
+  if (num.length <= pad){
+    return num
+  } else {
+    for (let i = 1; i <= pad; i++){
+      newArr.push(str)
+    }
+    newArr = newArr.join('')
+    return newArr + num
+  }
+  
+
+}
+
+console.log(formatWithPadding(1224, "*", 3))
 
 
 
