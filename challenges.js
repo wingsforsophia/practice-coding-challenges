@@ -346,26 +346,37 @@ isPalindrome(''); //=> true
 // Your solution for 11-isPalindrome here:
 
 
-function isPalendrome(str) {
-  str = str.split(' ').join('')
-  let length = str.length 
-  // let newStr = str.split('')
-  if ((length / 2).toFixed() > (length / 2)) {
-    length = (length / 2).toFixed()
-    let newStr = str.split('')
-    
+// function isPalendrome(str) {
+//   str = str.toLowerCase().split(' ').join('')
+//   let length = str.length 
+//   if ((length / 2).toFixed() > (length / 2)) {
+//     const thisLength = (length / 2).toFixed()
+//     let newStr = str.slice(thisLength, length)
+//     newStr = newStr.split('').reverse().join('')
+//     let halfStr = str.slice(0, thisLength-1)
+//     if (halfStr === newStr) {
+//       return true
+//     } else {
+//       return false
+//     }
+//   } else {
+//     const thisLength = (length / 2)
+//     let newStr = str.slice(thisLength, length)
+//   }
+// }
 
 
-    return newStr[length]
-  } else {
-    return "no"
+function isPalendrome(str){
+  str = str.toLowerCase()
+  while (str.includes(' ')) str = str.replace(' ', '')
+  for (let i = 0; i < Math.floor(str.length/2); i++){
+    if (str.charAt(i) !== str.charAt(str.length - i - 1)) return false
   }
-
-  
+  return true
 }
 
 
-console.log(isPalendrome("what is upppp"))
+console.log(isPalendrome("A nut for a jar of tuna"))
 
 
 
